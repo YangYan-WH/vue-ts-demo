@@ -2,9 +2,9 @@ import { createApp, defineComponent } from 'vue'
 import {App} from './App'
 
 const Home = defineComponent({
-  setup: (props, context) => {
+  setup: (props,context) => {
     return () => (
-      123
+      console.log(props, context)
     )
   }
 })
