@@ -1,4 +1,4 @@
-interface Event  {
+interface EventList  {
   on: (name: string, fn: Function)=> void
   emit: (name: string, ...arg: Array<any>) => void
   off: (name: string) => void
@@ -8,7 +8,7 @@ interface Event  {
 interface List  {
   [key:  string]: Array<Function>
 }
-class Dispathch implements Event {
+class Dispathch implements EventList {
   list: List
   constructor() {
     this.list = {}
@@ -23,7 +23,7 @@ class Dispathch implements Event {
   once() {}
 }
 
-cosnt o = new Dispathch()
+const o = new Dispathch()
 
 o.on('post', () => {
 

@@ -9,5 +9,10 @@ export default defineConfig({
       transformOn: true,
       mergeProps: true
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      "@/": 'src/'
+    }
+  }
 })
